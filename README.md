@@ -37,3 +37,8 @@ inlist_no_diffusion
 	but, 
 	do_element_diffusion = .false.
 
+calibrated_solar_model.py
+
+	"Vary the input parameters of your MESA model such the model parameters match the Sun's at the end of the run. To accomplish this, I suggest you write a function/script in python or bash which takes as inputs the initial Z, initial Y, and mixing length you would like to test. Then have the script run a MESA track with those inputs, read the output, and return a score based on how different your MESA model's values of luminosity, radius, and surface metallicity are from our Sun's values. Once you have this function/script, you can use an optimizer like scipy optimize least squares to find some best-fit initial parameters which give you a well-calibrated solar model. Be careful that you place bounds on your optimizer, so you do not try to make a MESA model with impossibly low or high values of helium/metal abundances."
+
+ 
