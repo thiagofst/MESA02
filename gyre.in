@@ -1,0 +1,56 @@
+&model
+    model_type = 'EVOL'
+    file = '/home/thiago/MESA_02/SolarModel_Diff_0.0245/profile3.data.GYRE'
+    file_format = 'MESA'
+/
+
+&constants
+    G_GRAVITY = 6.67408d-8
+/
+
+&mode
+    l = 50
+    tag = 'l50'
+/
+
+
+&osc
+    outer_bound = 'JCD'
+    variables_set = 'JCD'
+    inertia_norm = 'BOTH'
+/
+
+&rot
+/
+
+&num
+    diff_scheme = 'COLLOC_GL4'
+/
+
+&scan
+    grid_type = 'LINEAR'
+    freq_min_units = 'UHZ'
+    freq_max_units = 'UHZ'
+    freq_min = 1500
+    freq_max = 3500
+    n_freq = 500
+    tag_list = 'l50'
+/
+
+
+&grid
+  w_osc = 10  ! Oscillatory region weight parameter
+  w_exp = 2   ! Exponential region weight parameter
+  w_ctr = 10 
+/
+
+
+&ad_output
+    summary_file = '/home/thiago/MESA_02/SolarModel_Diff_0.0245/profile3.data.GYRE_l50.out'
+    summary_item_list = 'l,n_pg,n_p,n_g,freq,freq_units,E_norm'
+    summary_file_format = 'TXT'
+    freq_units = 'UHZ'
+/
+
+&nad_output
+/
