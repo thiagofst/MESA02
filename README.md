@@ -49,4 +49,7 @@ calibrated_solar_model.py
 	solar model. Be careful that you place bounds on your optimizer, so you do not try to make a 
 	MESA model with impossibly low or high values of helium/metal abundances."
 
+gyre.in
+
+	"inlist" to calculate the oscillation mode frequencies of stellar models. 
  
